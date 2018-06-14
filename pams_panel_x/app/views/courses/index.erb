@@ -1,0 +1,34 @@
+<h2> Course Home Page</h2>
+
+<h4>
+  	<%= link_to 'Add A New Course to the Data Base', new_course_path %>
+</h4>
+
+
+<h3> List of Courses </h3>
+
+   <% @courses.each do |course| %>
+
+   <div> 
+      Name: <%= course.name%>
+   </div>
+
+   <div> 
+      Total Hours In Class: <%= course.total_hours_in_class %>
+   </div>
+
+
+  <div>
+		<%= link_to 'Full Stats', course_path(course), 'data-disable-with': "Hold, please..." %>
+		
+	
+		<%= link_to 'Edit', edit_course_path(course), 'data-disable-with': "Transferring now..." %>
+
+    <%= link_to 'Remove', course_path(course), method: :delete, data: { confirm: 'Are you sure?' } %>
+
+
+	</div>
+
+	<br>
+
+   <% end %>

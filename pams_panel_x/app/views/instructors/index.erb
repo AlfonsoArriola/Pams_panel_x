@@ -1,0 +1,34 @@
+<h2> Instructors Home Page</h2>
+
+<h4>
+  	<%= link_to 'Add A New Instructor to the Data Base', new_instructor_path %>
+  	
+</h4>
+
+
+<h3> List of Instructors</h3>
+
+   <% @instructors.each do |instructor| %>
+
+   <div> Name: <%= instructor.last_name %>, <%= instructor.first_name %>
+    </div>
+
+    <div> Highest Education Completed: <%= instructor.highest_education_completed %>
+    </div>
+
+    <div>
+		<%= link_to 'Full Stats', instructor_path(instructor), 'data-disable-with': "Hold, please..." %>
+		
+	
+		<%= link_to 'Edit', edit_instructor_path(instructor), 'data-disable-with': "Transferring now..." %>
+
+	
+
+
+	</div>
+
+	<br>
+
+
+
+   <% end %>

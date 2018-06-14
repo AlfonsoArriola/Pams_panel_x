@@ -1,0 +1,34 @@
+<h2> Students Home Page</h2>
+
+<h4>
+  	<%= link_to 'Add A New Student to the Data Base', new_student_path %>
+  	
+</h4>
+
+
+<h3> List of Students</h3>
+
+   <% @students.each do |student| %>
+
+   <div> Name: <%= student.last_name %>, <%= student.first_name %>
+    </div>
+
+    <div> Highest Education Completed: <%= student.highest_education_completed %>
+    </div>
+
+    <div>
+		<%= link_to 'Full Stats', student_path(student), 'data-disable-with': "Hold, please..." %>
+		
+	
+		<%= link_to 'Edit', edit_student_path(student), 'data-disable-with': "Transferring now..." %>
+
+	
+
+
+	</div>
+
+	<br>
+
+
+
+   <% end %>
