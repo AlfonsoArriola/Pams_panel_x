@@ -1,5 +1,7 @@
 {
-  "name": "pams_panel_x",
-  "private": true,
-  "dependencies": {}
+ "name": "pams_panel_x",
+ "private": true,
+ "dependencies": {
+  "jquery": "^3.3.1"
+ }
 }
