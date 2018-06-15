@@ -1,3 +1,16 @@
-<h2> Input a New Course </h2>
+<%= form_for  @course do |f| %>
+		  <div>
+		 	 <%= f.label :name %>
+		 	 <%= f.text_field :name %>
+		  </div>
 
-      <%= render 'form'%>
+		  <div>
+		 	 <%= f.label :total_in_class_hours %>
+		 	 <%= f.text_field :total_in_class_hours %>
+		  </div>
+
+		  <div>
+		  	 <%= f.submit %>
+		  </div>
+
+<% end %>

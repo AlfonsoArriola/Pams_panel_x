@@ -1,0 +1,42 @@
+<h2> Cohort Home Page</h2>
+
+<h4>
+  	<%= link_to 'Add A New Cohort to the Data Base', new_cohort_path %>
+</h4>
+
+
+<h3> List of Cohorts </h3>
+
+   <% @cohorts.each do |cohort| %>
+
+   <div> 
+      Name: <%= cohort.name%>
+   </div>
+
+   <div> 
+     Start Date : <%= cohort.start_date %>
+   </div>
+
+    <div> 
+     End Date : <%= cohort.end_date %>
+   </div>
+
+   <div> 
+     Instructor : <%= cohort.instructor_id%>
+   </div>
+
+
+  <div>
+		<%= link_to 'Full Stats', cohort_path(cohort), 'data-disable-with': "Hold, please..." %>
+		
+	
+		<%= link_to 'Edit', edit_cohort_path(cohort), 'data-disable-with': "Transferring now..." %>
+
+    <%= link_to 'Remove', cohort_path(cohort), method: :delete, data: { confirm: 'Are you sure?' } %>
+
+
+	</div>
+
+	<br>
+
+   <% end %>
