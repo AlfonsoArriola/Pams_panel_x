@@ -22,5 +22,129 @@
 
 
 body{
- background: $patrick-color;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+    background: $patrick-color;
 }
+
+
+
+.logo {
+	position: fixed;
+	float: left;
+	margin: 1rem 2.5rem;
+	font-weight: bold;
+	font-size: 2em;
+}
+
+nav{
+	position: fixed;
+	width: 100%;
+}
+
+
+nav ul{
+	list-style: none;
+	background: lavender;
+	overflow: hidden;
+	color: black;
+	padding: 0;
+	text-align: center;
+	margin: 0;
+	transition: 1s;
+}   
+
+nav.black ul {
+	background: #000;
+}
+
+nav ul li{
+	display: inline-block;
+	padding: 20px;
+
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 1.5rem;
+}
+
+.menu-icon {
+	width: 100%;
+	background: #000;
+	text-align: right;
+	box-sizing: border-box;
+	padding: 1rem 1.5rem;
+	color: #fff;
+	display: none;
+}
+
+.footer{
+	background: $primary-color;
+	color: $patrick-color;
+	 height: 7rem;
+	 position: fixed;
+     left: 0;
+     bottom: 0;
+     width: 100%;
+}
+
+/*_______   Media Queried   __________*/
+
+@media(max-width: 580px){
+	.logo{
+		position: fixed;
+		top: 0;
+		margin-top: 1rem;
+		color:$egg-color;
+	}
+
+    nav ul{
+    	max-height: 0px;
+    	background: #000;
+    }
+
+    nav.black ul{
+    	background: #000;
+    }
+
+    .showing{
+    	max-height: 20em;
+    }
+
+    nav ul li {
+    	box-sizing:  border-box;
+    	width: 100%;
+    	padding: 1.5rem;
+    	text-align: center;
+    }
+
+    .menu-icon {
+    	display: block;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+

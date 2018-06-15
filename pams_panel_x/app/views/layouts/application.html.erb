@@ -7,34 +7,46 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
 
     <div class="wrapper">
      <nav>
-       <div class="logo">
+       <div class="menu-icon">
+        <i class="fa fa-bars"></i>
+         
+       </div>
+       <div class="logo"> Logo </div>
          <ul>
            <li>
-             <a href="#">Students</a>
+             <a href="students">Students</a>
            </li>
            <li>
-             <a href="#"> Instructors</a>
+             <a href="instructors"> Instructors</a>
            </li>
            <li>
-             <a href="#"> Cohorts</a>
+             <a href="cohorts"> Cohorts</a>
            </li>
            <li>
-             <a href="#">Courses</a>
+             <a href="courses">Courses</a>
            </li>
          </ul>
-       </div>
+       
      </nav>        
     </div>
 
     
-    <p>  I am a test for the soon to be menu</p>
     <%= yield %>
+
+
+    <div class="footer">
+      <p> This Is A Footer </p>
+      
+    </div>
+
+
 
   </body>
 </html>

@@ -35,4 +35,9 @@ class InstructorsController < ApplicationController
 		Instructor.destroy(params[:id])
 		redirect_to instructors_path
 	end
+
+	def instructor_params
+		params.require(:instructor).permit(:first_name, :last_name, :highest_completed_education, :age, :salary)
+		
+	end
 end

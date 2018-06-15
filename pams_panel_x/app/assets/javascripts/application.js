@@ -9,6 +9,25 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//
+//= require jquery
+
 //= require rails-ujs
 //= require_tree .
+
+$(document).ready(function(){
+	$('.menu-icon').on('click', function(){
+		$('nav ul').toggleClass('showing');
+	});
+}); 
+
+
+// _____ May not need this if the page is small  ________
+
+$(window).on('scroll', function(){
+	if($(window).scrollTop()) {
+		$('nav').addClass('black');
+	}
+	else {
+		$('nav').removeClass('black')
+	}
+})
