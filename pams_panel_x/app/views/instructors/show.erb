@@ -6,9 +6,9 @@
 <div> Last Name: <%= @instructor.last_name %> </div>
 
 
-<div> Highest Education Completed: <%= @instructor.highest_education_completed %> </div>
+<div> Highest Education Completed: <%= @instructor.highest_completed_education %> </div>
 
 
 <div> Age: <%= @instructor.age %> </div>
 
-<div> Salary: <%= @instructor.salary %> </div>
+<div> Salary: <%=number_to_currency( @instructor.salary )%></div>

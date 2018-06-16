@@ -15,9 +15,35 @@
 //= require_tree .
 
 $(document).ready(function(){
+
 	$('.menu-icon').on('click', function(){
 		$('nav ul').toggleClass('showing');
 	});
+
+}); 
+
+
+$(document).ready(function() {
+
+if(document.querySelector('body.students.index') == undefined){
+	return;
+}
+		   $('.delete-student').click(function(e){
+		   	e.preventDefault();
+		   	let deletionURL = e.target.getAttribute('href');
+
+		   	$.ajax({
+		   		method: 'DELETE',
+		   		url: deletionURL,
+		   		success: function (data){
+		   			$(e.target).parents('.student').remove();
+		   			
+		   		}
+		   	});
+		   })
+
+
+
 }); 
 
 

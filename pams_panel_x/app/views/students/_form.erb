@@ -11,12 +11,12 @@
 
 		  <div>
 		 	 <%= f.label :highest_completed_education %>
-		 	 <%= f.text_field :highest_completed_education %>
+		 	 <%= f.select(:highest_completed_education, ['HS','College','Masters','PHD']) %>
 		 </div>
 
 		 <div>
 		 	 <%= f.label :age %>
-		 	 <%= f.text_field :age %>
+		 	 <%= f.date_select(:age, :start_year => 1940, :end_year => Date.current.year - 13) %>
 		 </div>
 
 		

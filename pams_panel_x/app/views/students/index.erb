@@ -7,11 +7,14 @@
 
 
 <h3> List of Students</h3>
-
+<div class="mb-4">
    <% @students.each do |student| %>
+   <div class="mb-4 main-student">
+    <div id="name-div">
 
    <div> Name: <%= student.last_name %>, <%= student.first_name %>
     </div>
+      </div>
 
     <div> Highest Education Completed: <%= student.highest_completed_education %>
     </div>
@@ -22,6 +25,8 @@
 	
 		<%= link_to 'Edit', edit_student_path(student), 'data-disable-with': "Transferring now..." %>
 
+    <%= link_to 'Delete', student, method: :delete, remote: true, class: 'delete-student' %>
+
 	
 
 
@@ -30,5 +35,7 @@
 	<br>
 
 
-
+</div>
    <% end %>
+
+</div>

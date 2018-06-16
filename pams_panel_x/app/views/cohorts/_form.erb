@@ -16,7 +16,12 @@
 
 		  <div>
 		 	 <%= f.label :instructor_id %>
-		 	 <%= f.text_field :instructor_id %>
+		 	 <%= f.select(:instructor_id, @instructors.map {|i| [i.last_name, i.first_name]}) %>
+		  </div>
+
+		  <div>
+		 	 <%= f.label :course_id %>
+		 	 <%= f.select(:course_id, @courses.map {|c| [c.name]}) %>
 		  </div>
 
 		  <div>

@@ -6,16 +6,22 @@ class CohortsController < ApplicationController
 
 	def create
 		Cohort.create(cohort_params)
+		@instructors = Instructor.all
+		@courses = Course.all
 
 		redirect_to  cohorts_path
 	end
 
 	def new
 		@cohort = Cohort.new
+		@instructors = Instructor.all
+		@courses = Course.all
 	end
 
 	def edit
 		@cohort = Cohort.find(params[:id])
+		@instructors = Instructor.all
+		@courses = Course.all
 	end 
 
 	def show
@@ -25,6 +31,9 @@ class CohortsController < ApplicationController
 	def update
 		cohort = Cohort.find(params[:id])
 		cohort.update(cohort_params)
+
+		@instructors = Instructor.all
+		@courses = Course.all
 
 		redirect_to cohorts_path
 	end
@@ -37,7 +46,7 @@ class CohortsController < ApplicationController
 	private	
 
 	def cohort_params
-		params.require(:cohort).permit(:name, :start_date, :end_date, :instructor_id)
+		params.require(:cohort).permit(:name, :start_date, :end_date, :course_id, :instructor_id)
 		
 	end
 end
