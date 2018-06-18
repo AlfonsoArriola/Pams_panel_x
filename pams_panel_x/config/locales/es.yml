@@ -1,0 +1,56 @@
+es:
+  navi:
+    student: 'Estudiante'
+    instructor: 'Instructor'
+    course: 'Curso'
+    cohort: 'Cohorte'
+    logo: 'Logo'
+    lang: 'English?'
+
+  landing:
+    title: 'La Bronx Escuela De Código'
+    slogan: 'Crear alas, no muros'
+    sign_in: 'Registrarse'
+    edit: 'Editar perfil'
+    sign_out: 'Desconectar'
+    sign_up: 'Regístrate'
+
+  form:
+    hs: 'escuela secundaria'
+    college: 'Universidad'
+    masters: 'Maestros'
+    phd: 'Doctorado'
+
+  edit:
+    student_title: 'Editar registro de estudiante'
+    instructor_title: 'Editar el registro del instructor'
+    course_title: 'Editar registro del curso'
+    cohort_title: 'Editar registro de cohorte'
+
+  home:
+    s_title: 'Página de estudiantes'
+    s_new_add: 'Agregar un nuevo estudiante a la base de datos'
+    s_list: 'Lista de estudiantes'
+    s_name: 'Nombre'
+    s_education: 'Nivel de educación más alto completado'
+    s_full_stats: 'Registro completo'
+    s_edit_button: 'Editar'
+    s_delete: 'Borrar'
+
+  new:
+    s_title: 'Crear un nuevo registro de estudiante'
+
+  create:
+    s_first_name: 'Nombre de pila'
+    s_last_name: 'Apellido'
+    s_education: 'Nivel de educación más alto completado'
+    s_age: 'Años'
+
+  notice:
+    failure: 'Falta información'
+    new: '¡Se hizo un nuevo récord!'
+    update: '¡La actualización fue exitosa!'
+
+
+
+

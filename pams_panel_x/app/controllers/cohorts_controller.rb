@@ -9,6 +9,8 @@ class CohortsController < ApplicationController
 		@instructors = Instructor.all
 		@courses = Course.all
 
+		flash[:notice] = "New Cohort Record created Successfully!"
+
 		redirect_to  cohorts_path
 	end
 
@@ -34,6 +36,8 @@ class CohortsController < ApplicationController
 
 		@instructors = Instructor.all
 		@courses = Course.all
+
+		flash[:notice] = "Updated Successfully!"
 
 		redirect_to cohorts_path
 	end

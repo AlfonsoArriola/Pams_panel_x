@@ -11,12 +11,13 @@
 
 		  <div>
 		 	 <%= f.label :highest_completed_education%>
-		 	 <%= f.select(:highest_completed_education, ['HS','College','Masters','PHD']) %>
+		 	 <%= f.select(:highest_completed_education, [ t("form.hs"), t("form.college") ,
+		           t("form.masters"), t("form.phd" )]) %>
 		 </div>
 
 		 <div>
 		 	 <%= f.label :age %>
-		 	 <%= f.text_field :age %>
+		 	 <%= f.number_field :age %>
 		 </div>
 
 		 <div>

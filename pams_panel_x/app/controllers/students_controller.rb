@@ -1,13 +1,19 @@
 class StudentsController < ApplicationController
 	before_action :authenticate_user!
 	def index
-		@students = Student.all	
+		@students = Student.all.order(:last_name)
 	end
 
 	def create
-		Student.create(student_params)
-
-		redirect_to students_path
+		@student = Student.create(student_params)
+        
+        if @student.valid?
+		    flash[:notice] = t('notice.new')
+		     redirect_to students_path
+		 else
+		 	flash[:notice] = t('notice.failure')
+		 	render :new
+		 end
 	end
 
 	def new
@@ -25,7 +31,8 @@ class StudentsController < ApplicationController
 	def update
 		student = Student.find(params[:id])
 		student.update(student_params)
-
+        #   Have to find a way to flash when updated with missing information
+        flash[:notice] = t('notice.update')
 		redirect_to students_path
 	end
 

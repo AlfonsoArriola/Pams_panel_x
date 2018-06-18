@@ -22,6 +22,39 @@ $(document).ready(function(){
 
 }); 
 
+$(document).ready(function(){
+   $('#notice_wrapper').hide();
+	$('#notice_wrapper').fadeIn();
+  setTimeout(function(){
+    $('#notice_wrapper').fadeOut('slow', function(){
+    	$(this).remove();
+    })
+  }, 4500);
+
+}); 
+
+
+
+
+
+// $(window).load(function() {
+//         // will first fade out the loading animation
+//     $("#status").fadeOut();
+//         // will fade out the whole DIV that covers the website.
+//     $("#preloader").delay(1000).fadeOut("slow");
+// })
+
+jQuery(document).ready(function($) {  
+
+// site preloader -- also uncomment the div in the header and the css style for #preloader
+$(window).load(function(){
+	$('#preloader').fadeOut('slow',function(){$(this).remove();});
+});
+
+});
+
+
+
 
 $(document).ready(function() {
 

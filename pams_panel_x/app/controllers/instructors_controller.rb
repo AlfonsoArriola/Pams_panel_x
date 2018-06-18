@@ -6,9 +6,15 @@ class InstructorsController < ApplicationController
 
 
 	def create
-		Instructor.create(instructor_params)
-		# *maybe add a flash/toaster message
-		redirect_to  instructors_path
+		@instructor = Instructor.create(instructor_params)
+
+		if @instructor.valid?
+		    flash[:notice] = "Success! New Instructor Record Made."
+		     redirect_to instructors_path
+		 else
+		 	flash[:notice] = "Missing Information."
+		 	render :new
+		 end
 	end
 
 	def new
@@ -26,6 +32,7 @@ class InstructorsController < ApplicationController
 	def update
 		instructor = Instructor.find(params[:id])
 		instructor.update(instructor_params)
+		flash[:notice] = "Record Updated Successfully!"
 		
 		redirect_to instructors_path
 	end

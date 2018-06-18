@@ -30,4 +30,70 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  navi:
+    student: 'Student'
+    instructor: 'Instructor'
+    course: 'Course'
+    cohort: 'Cohort'
+    logo: 'Logo'
+    lang: '¿Español?'
+
+  landing:
+    title: 'Bronx School of Coding'
+    slogan: 'Create Wings, Not Walls'
+    sign_in: 'Sign In'
+    edit: 'Edit Profile'
+    sign_out: 'Sign Out'
+    sign_up: 'Sign Up'
+
+  form:
+    hs: 'High School'
+    college: 'College'
+    masters: 'Masters'
+    phd: 'Phd'
+
+  edit:
+    student_title: 'Edit Student Record'
+    instructor_title: 'Edit Instructor Record'
+    course_title: 'Edit Course Record'
+    cohort_title: 'Edit Cohort Record'
+
+  home:
+    s_title: 'Students Home Page'
+    s_new_add: 'Add A New Student Record'
+    s_list: 'Student Roster'
+    s_name: 'Name'
+    s_education: 'Highest Level Of Education Completed'
+    s_full_stats: 'Complete Record'
+    s_edit_button: 'Edit'
+    s_delete: 'Delete'
+  new:
+    s_title: 'Create A New Student Record'
+  create:
+    s_first_name: 'First Name'
+    s_last_name: 'Last Name'
+    s_education: 'Highest Level Of Education Completed'
+    s_age: 'Age'
+  notice:
+    failure: 'Missing information'
+    new: 'A New Record was Made!'
+    update: 'Update was Successful!'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

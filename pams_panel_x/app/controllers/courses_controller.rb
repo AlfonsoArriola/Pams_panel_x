@@ -5,10 +5,14 @@ class CoursesController < ApplicationController
 	end
 
 	def create
-		Course.create(course_params)
-
-		redirect_to  courses_path
-	end
+		@course = Course.create(course_params)
+		if @course.valid?
+		    flash[:notice] = "Success! New Course Record Made."
+		     redirect_to courses_path
+		 else
+		 	flash[:notice] = "Missing Information."
+		 	render :new
+		 end
 
 	def new
 		@course = Course.new
@@ -25,6 +29,7 @@ class CoursesController < ApplicationController
 	def update
 		course = Course.find(params[:id])
 		course.update(course_params)
+		flash[:notice] = "Updated Successfully!"
 
 		redirect_to courses_path
 	end
@@ -40,4 +45,5 @@ class CoursesController < ApplicationController
 		params.require(:course).permit(:name, :total_in_class_hours)
 		
 	end
+end
 end

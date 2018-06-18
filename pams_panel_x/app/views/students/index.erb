@@ -1,31 +1,37 @@
-<h2> Students Home Page</h2>
 
+
+
+
+
+
+<h2> <%= t('home.s_title') %></h2>
+ 
 <h4>
-  	<%= link_to 'Add A New Student to the Data Base', new_student_path %>
+  	<%= link_to t('home.s_new_add') , new_student_path %>
   	
 </h4>
 
 
-<h3> List of Students</h3>
+<h3> <%= t('home.s_list') %></h3>
 <div class="mb-4">
    <% @students.each do |student| %>
    <div class="mb-4 main-student">
     <div id="name-div">
 
-   <div> Name: <%= student.last_name %>, <%= student.first_name %>
+   <div> <%= t('home.s_name') %>: <%= student.last_name %>, <%= student.first_name %>
     </div>
       </div>
 
-    <div> Highest Education Completed: <%= student.highest_completed_education %>
+    <div> Highest Education Completed: <%= t('home.s_education') %>
     </div>
 
     <div>
-		<%= link_to 'Full Stats', student_path(student), 'data-disable-with': "Hold, please..." %>
+		<%= link_to t('home.s_full_stats'), student_path(student), 'data-disable-with': "Hold, please..." %>
 		
 	
-		<%= link_to 'Edit', edit_student_path(student), 'data-disable-with': "Transferring now..." %>
+		<%= link_to t('home.s_edit_button'), edit_student_path(student), 'data-disable-with': "Transferring now..." %>
 
-    <%= link_to 'Delete', student, method: :delete, remote: true, class: 'delete-student' %>
+    <%= link_to  t('home.s_delete'), student, method: :delete, remote: true, class: 'delete-student' %>
 
 	
 

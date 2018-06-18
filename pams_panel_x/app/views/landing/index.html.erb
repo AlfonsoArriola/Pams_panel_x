@@ -1,4 +1,28 @@
-<h1>  Happy Landings </h1>
-<p>  
-	With your corny self.
-</p>
+
+
+<h1>  <%= t "landing.title" %> </h1>
+
+  <h3> <%= t "landing.slogan" %>  </h3>
+     
+
+<ul>
+	    <% if user_signed_in? %>
+	<li>
+		 <%= current_user.email %>
+	</li>
+	  <li>
+	  	<%= link_to t('landing.sign_out'), destroy_user_session_path, method: :delete %>
+	  </li>
+
+	   <li>
+	  	<%= link_to t('landing.edit'), edit_user_registration_path %>
+	  </li>
+	<% else %>
+	    <li>
+	    	<%= link_to t('landing.sign_in'), new_user_session_path %>
+	    </li>
+	    <li>
+	    	<%= link_to t('landing.sign_up'), new_user_registration_path %>
+	    </li>
+	<% end %>
+</ul>
