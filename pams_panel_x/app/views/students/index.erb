@@ -31,7 +31,7 @@
 	
 		<%= link_to t('home.s_edit_button'), edit_student_path(student), 'data-disable-with': "Transferring now..." %>
 
-    <%= link_to  t('home.s_delete'), student, method: :delete, remote: true, class: 'delete-student' %>
+    <%= link_to 'Remove', student_path(student), method: :delete, data: { confirm: 'Are you sure?' } %>
 
 	
 
